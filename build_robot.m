@@ -23,7 +23,7 @@ if ~exist(robot_dir, 'dir')
 end
 
 %% Flags
-rebuild_link = false;
+rebuild_link = true;
 rebuild_linkage = true;
 
 % File Names
@@ -55,5 +55,5 @@ else
 end
 
 %% Show Robot
-% T1.plotq(0.2*randn(T1.ndof, 1))
-T1.plotq0
+T1.plotq(0.2*randn(T1.ndof, 1))
+% T1.plotq0

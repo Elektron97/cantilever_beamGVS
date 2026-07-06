@@ -24,7 +24,8 @@ T1.CEF = true;
 
 %% Solve Statics
 global load_tip;
-load_tip = [5; 0.04; 0; 0; 0; 2e-3];
+% Wrench: [torque; load];
+load_tip = [0, 0, 2e-3, -5, 0.04, 0]';
 
 % Solve Statics through trust-region
 q0 = 1e+0*randn(T1.ndof, 1);    % Initial guess
